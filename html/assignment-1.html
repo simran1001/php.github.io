@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: #2272ea;
+            border: 2px solid #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 30px 30px 30px rgba(1, 94, 200, 0.5);
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px;
+        }
+
+        .box h2 {
+            margin: 10px 0;
+            color: #b3e687;
+        }
+
+        .box ul {
+            list-style-type: square;
+            padding: 5%;
+            text-align: left;
+        }
+
+        .box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        .box table th, .box table td {
+            border: 2px solid #6d995c;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .box a {
+            color: #80d834;
+            text-decoration: none;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        .box .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #51a977;
+            color: #ffffff;
+            text-decoration: solid;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .box .button:hover {
+            background-color: #43c778;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="box" ondrop="DragEvent" ondragover="allowdrop(event)">
+            <img src="https://wallpapers-clan.com/wp-content/uploads/2022/08/default-pfp-18.jpg" alt="Image">
+            <h2><b>Dragonball Super</b></h2>
+            <ul><b>
+                <li>Goku</li>
+                <li>Vegeta</li>
+                <li>Beerus</li>
+            </b></ul>
+            <table>
+                <tr>
+                    <th>Strength</th>
+                    <th>Weakness</th>
+                </tr>
+                <tr>
+                    <td>Supernatural Power</td>
+                    <td>Fatigue</td>
+                </tr>
+                <tr>
+                    <td>unbeatable Power</td>
+                    <td>Food</td>
+                </tr>
+            </table>
+            <a href="https://www.sportskeeda.com/anime/dragon-ball-5-times-goku-weak-5-times-strongest" target="_blank">Visit Example</a>
+            <a class="button" href="https://sheerepic.com/goku-vs-goku/">Learn More</a>
+        </div>
+    </div>
+    <script>
+        var div = document.querySelector(".container");
+        div.addEventListener(
+            "mousemove",function(e){
+                x=e.offsetX;
+                y=e.offsetY;
+                div.style.backgroundColor='rgb(${x}, ${y}, ${x-y})';
+            }
+        );
+    </script>
+</body>
+</html>
